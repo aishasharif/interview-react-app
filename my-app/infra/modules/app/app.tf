@@ -1,8 +1,3 @@
-# resource "random_name" "app_name" {
-#   length  = 16
-#   special = false
-# }
-
 resource "azurerm_resource_group" "rg" {
   name     = "rg-${terraform.workspace}"
   location = var.location
