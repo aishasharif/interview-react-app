@@ -46,17 +46,17 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: ../../my-app/infra
+        working-directory: my-app/infra
 
       - name: Select/Create Workspace
         run: |
           ENV=${GITHUB_REF##*/}
           terraform workspace select $ENV || terraform workspace new $ENV
-        working-directory: infra
+        working-directory: my-app/infra
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-        working-directory: infra
+        working-directory: my-app/infra
       
       - name: Get Deployment Token
         run: |
