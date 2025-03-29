@@ -46,7 +46,7 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: infra
+        working-directory: ../../my-app/infra
 
       - name: Select/Create Workspace
         run: |
