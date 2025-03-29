@@ -45,7 +45,11 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        run: terraform init
+        run: |
+          ENV=${GITHUB_REF##*/} # e.g. 'dev', 'stg', 'prd'
+          terraform workspace select $ENV || terraform workspace new $ENV
+          terraform init \
+            -backend-config="key=terraform.${ENV}.tfstate" 
         working-directory: my-app/infra
 
       - name: Select/Create Workspace
