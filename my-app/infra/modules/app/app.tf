@@ -13,6 +13,6 @@ resource "azurerm_static_web_app" "webapp" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
 
-  sku_tier        = "Free"
-
+  
+  depends_on = [azurerm_resource_group.rg]
 }
