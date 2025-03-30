@@ -16,22 +16,6 @@ permissions:
   
 jobs:
 
-  # code-quality:
-  #   name: Code Quality - SonarCloud
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout repo
-  #       uses: actions/checkout@v3
-
-  #     - name: SonarCloud Scan
-  #       uses: SonarSource/sonarcloud-github-action@master
-  #       with:
-  #         projectBaseDir: .
-  #       env:
-  #         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  #         SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
-  #         SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
-  
   infra:
     name: Infrastructure 
     runs-on: ubuntu-latest
