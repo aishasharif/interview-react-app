@@ -14,6 +14,5 @@ resource "azurerm_static_web_app" "webapp" {
   location            = azurerm_resource_group.rg.location
 
   sku_tier        = "Free"
-  branch          = var.branch
-  repository_url  = var.repository_url
+
 }
