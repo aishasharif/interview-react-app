@@ -65,7 +65,9 @@ jobs:
           ENV=${GITHUB_REF##*/}
           terraform workspace select $ENV || terraform workspace new $ENV
         working-directory: my-app/infra
-
+      - name: Enable TF Debug
+        run: echo "TF_LOG=DEBUG" >> $GITHUB_ENV
+        
       - name: Terraform Apply
         run: terraform apply -auto-approve
         working-directory: my-app/infra
