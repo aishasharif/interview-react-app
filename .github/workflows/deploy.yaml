@@ -72,16 +72,6 @@ jobs:
         run: terraform apply -auto-approve
         working-directory: my-app/infra
       
-      - name: Get Deployment Token
-        run: |
-          ENV=${GITHUB_REF##*/}
-          TOKEN=$(az staticwebapp secrets list \
-            --name webapp-$ENV \
-            --resource-group rg-$ENV \
-            --query "properties.deploymentToken" -o tsv)
-          echo "AZURE_STATIC_WEB_APPS_API_TOKEN=$TOKEN" >> $GITHUB_ENV
-
-
 
   deploy:
     name: Deploy React App
