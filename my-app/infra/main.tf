@@ -15,5 +15,4 @@ provider "azurerm" {
 module "webapp" {
   source = "./modules/app"
   location = var.location
-
 }
