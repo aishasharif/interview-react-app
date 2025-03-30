@@ -12,4 +12,8 @@ resource "azurerm_static_web_app" "webapp" {
   name                = "webapp-${terraform.workspace}"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
+
+  sku_tier        = "Free"
+  branch          = var.branch
+  repository_url  = var.repository_url
 }
