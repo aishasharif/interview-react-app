@@ -26,7 +26,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
 
-  jobs:
   build:
     name: Build App
     runs-on: ubuntu-latest
