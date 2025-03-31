@@ -1,3 +1,2 @@
-variable "location" {
-  
-}
+variable "location" {}
+
