@@ -52,6 +52,36 @@ jobs:
       - name: Enable TF Debug
         run: echo "TF_LOG=DEBUG" >> $GITHUB_ENV
 
+      - name: Terraform Validate
+        if: github.event_name == 'pull_request'
+        run: terraform validate
+        working-directory: my-app/infra
+
+      - name: Terraform Plan
+        if: github.event_name == 'pull_request'
+        run: terraform plan -out=tfplan
+        working-directory: my-app/infra
+
+      - name: Save Terraform Plan Output
+        if: github.event_name == 'pull_request'
+        run: terraform show -no-color tfplan > plan.txt
+        working-directory: my-app/infra
+
+      - name: Comment PR with Terraform Plan
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const plan = fs.readFileSync('my-app/infra/plan.txt', 'utf8');
+            const issue_number = context.payload.pull_request.number;
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number,
+              body: `###  Terraform Plan\n\`\`\`\n${plan}\n\`\`\``
+            });
+
       - name: Terraform Apply
         run: terraform apply -auto-approve
         working-directory: my-app/infra
