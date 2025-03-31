@@ -1,10 +1,10 @@
-name: Deploy Stg
+name: Azure Static Web Apps CI/CD
 
 on:
   push:
-    branches: [ stg ]
+    branches: [ dev, qa, stg, main ]
   pull_request:
-    branches: [ stg ]
+    branches: [ dev, qa, stg, main ]
     types: [opened, synchronize, reopened, closed]
 
 permissions:
@@ -14,17 +14,17 @@ permissions:
 
 jobs:
   sonarqube:
-    name: SonarQube
+    name: SonarQube Scan
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 
+          fetch-depth: 0
+
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-   
 
   build:
     name: Build App
@@ -51,18 +51,18 @@ jobs:
         working-directory: my-app
 
   deploy:
-    name: Deploy to stg
+    name: Deploy App
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: stg
+      name: ${{ github.ref_name == 'main' && 'prod' || github.ref_name }}
     steps:
       - uses: actions/checkout@v3
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN}}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "my-app"
