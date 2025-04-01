@@ -114,7 +114,7 @@
           <mxGeometry x="629.04" y="165" width="95" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7wI6CimemcjMPgal6HPT-87" value="Github actions" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="1201.34" y="135" width="100" height="30" as="geometry" />
+          <mxGeometry x="1201.34" y="160" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="7wI6CimemcjMPgal6HPT-89" value="Pipeline triggers on push &amp;amp; PR" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1170" y="50" width="180" height="30" as="geometry" />
