@@ -3,16 +3,6 @@ variable "location" {
   type        = string
 }
 
-variable "appname" {
-  description = "Name of the Azure Static Web App"
-  type        = string
-}
-
-variable "rg_name" {
-  description = "Name of the Resource Group to associate the Static Web App with"
-  type        = string
-}
-
 variable "sku_tier" {
   description = "SKU tier for the Static Web App (e.g., Free, Standard)"
   type        = string
@@ -29,4 +19,27 @@ variable "tags" {
   description = "Tags to apply to resources"
   type        = map(string)
   default     = {}
+}
+
+variable "environment" {
+    description = "Deployment environment"
+    type = string
+}
+
+variable "rg_prefix" {
+    description = "The resource froup prefix"
+    type = string
+    default = "rg"
+}
+
+variable "stweb_prefix" {
+    description = "Prefix for Static Web App"
+    type        = string
+    default     = "stweb"
+}
+
+variable "project_name" {
+  description = "Project or application name"
+  type        = string
+  default = "reactapp"
 }
