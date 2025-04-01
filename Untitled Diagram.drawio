@@ -1,9 +1,48 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
   <diagram name="Page-1" id="x7u3mcI3NVOnRVFoVJLS">
-    <mxGraphModel>
+    <mxGraphModel dx="745" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="7wI6CimemcjMPgal6HPT-19" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="590" y="30" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7wI6CimemcjMPgal6HPT-2" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjE2IDE0IDMyIDM2LjM2Mzk5ODQxMzA4NTk0IiBoZWlnaHQ9IjQ1NC41NDk5ODAxNjM1NzQyIiB3aWR0aD0iNDAwIj48cGF0aCBmaWxsPSIjNDA0MEIyIiBkPSJNMzguMDYgMjYuMTUxdjExLjQ3M0w0OCAzMS44OTFWMjAuNDA2bC05Ljk0IDUuNzQ1eiIvPjxwYXRoIGZpbGw9IiM1QzRFRTUiIGQ9Im0yNy4wMyAyMC40MDYgOS45NCA1Ljc0NXYxMS40NzNsLTkuOTQtNS43NFYyMC40MDd6TTE2IDE0djExLjQ3OWw5Ljk0IDUuNzR2LTExLjQ4TDE2IDE0em0xMS4wMyAzMC42MjQgOS45NCA1Ljc0di0xMS40OGwtOS45NC01LjczOXYxMS40OHoiLz48L3N2Zz4=;" vertex="1" parent="1">
+          <mxGeometry x="200" y="70" width="42.75" height="48.63" as="geometry" />
+        </mxCell>
+        <mxCell id="7wI6CimemcjMPgal6HPT-5" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/preview/Static_Apps.svg;" vertex="1" parent="1">
+          <mxGeometry x="636.12" y="30" width="37.77" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7wI6CimemcjMPgal6HPT-8" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/other/Azure_A.svg;" vertex="1" parent="1">
+          <mxGeometry x="428.8" y="70" width="51.57" height="48.63" as="geometry" />
+        </mxCell>
+        <mxCell id="7wI6CimemcjMPgal6HPT-12" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/File.svg;" vertex="1" parent="1">
+          <mxGeometry x="780" y="88.63" width="24.35" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7wI6CimemcjMPgal6HPT-17" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="101" as="sourcePoint" />
+            <mxPoint x="400" y="101" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7wI6CimemcjMPgal6HPT-18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="100" as="sourcePoint" />
+            <mxPoint x="570" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7wI6CimemcjMPgal6HPT-24" value="Dev" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="615" y="70" width="80" height="20.68" as="geometry" />
+        </mxCell>
+        <mxCell id="7wI6CimemcjMPgal6HPT-25" value="Qa" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="615" y="99.32" width="80" height="20.68" as="geometry" />
+        </mxCell>
+        <mxCell id="7wI6CimemcjMPgal6HPT-26" value="Stg" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="615" y="124.66" width="80" height="20.68" as="geometry" />
+        </mxCell>
+        <mxCell id="7wI6CimemcjMPgal6HPT-27" value="Prod" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="615" y="150" width="80" height="20.68" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
