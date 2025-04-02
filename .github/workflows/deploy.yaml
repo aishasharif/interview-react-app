@@ -43,7 +43,7 @@ jobs:
           action: "upload"
           app_location: "my-app"
           output_location: "build"
-          production_branch: "main"
+          production_branch: ${{ github.ref_name }}
           
 
   close_pull_request_job:
