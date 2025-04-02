@@ -20,6 +20,9 @@ function App() {
         {/* <div>
           <h1>Hello world</h1>
         </div> */}
+        <div>
+          <h1>Hello world</h1>
+        </div>
       </header>
     </div>
   );
